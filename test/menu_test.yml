@@ -1,0 +1,209 @@
+---
+-
+  ident: !ruby/sym file
+  text: '&File'
+  items:
+    -
+      ident: !ruby/sym new
+      type: command
+      text: '&New'
+      shortcut: Ctrl-N
+      status: Create a new hotspot file
+      method: commandNewHotspots
+    -
+      ident: !ruby/sym open
+      type: command
+      text: '&Open'
+      shortcut: Ctrl-N
+      status: Load a previously saved set of hotspots
+      method: commandOpenHotspots
+    -
+      ident: !ruby/sym save
+      type: command
+      text: '&Save'
+      shortcut: Ctrl-S
+      status: Save the current hotspots
+      method: commandSaveHotspots
+    -
+      ident: !ruby/sym saveAs
+      type: command
+      text: 'Save &As...'
+      shortcut: Alt-Shift-S
+      status: Save the current hotspots with a different name
+      method: commandSaveHotspotsAs
+    -
+      type: separator
+    -
+      ident: !ruby/sym background
+      type: command
+      text: 'Open &Background...'
+      status: Load a background image
+      method: commandOpenBackground
+    -
+      type: separator
+    -
+      ident: !ruby/sym quit
+      type: command
+      text: '&Quit'
+      shortcut: Alt-F4
+      status: Load a background image
+      method: commandQuit
+-
+  ident: !ruby/sym edit
+  text: '&Edit'
+  items:
+    -
+      ident: !ruby/sym undo
+      type: command
+      text: '&Undo'
+      shortcut: Ctrl-Z
+      status: Undo the last action
+      disabled: true
+    -
+      ident: !ruby/sym redo
+      type: command
+      text: '&Redo'
+      shortcut: Ctrl-Y
+      status: Redo the last action
+      disabled: true
+    -
+      ident: !ruby/sym revert
+      type: command
+      text: 'Revert'
+      shortcut: Ctrl-Y
+      status: Revert to last saved version
+      disabled: true
+    -
+      type: separator
+    -
+      ident: !ruby/sym cut
+      type: command
+      text: 'Cu&t'
+      shortcut: Ctrl-X
+      status: Cut out the current selection
+      method: commandCut
+    -
+      ident: !ruby/sym copy
+      type: command
+      text: '&Copy'
+      shortcut: Ctrl-C
+      status: Copy the current selection
+      method: commandCopy
+    -
+      ident: !ruby/sym paste
+      type: command
+      text: '&Paste'
+      shortcut: Ctrl-X
+      status: Pastes items cut or copied beforehand
+      method: commandPaste
+      disabled: true
+    -
+      type: separator
+    -
+      ident: !ruby/sym selectAll
+      type: command
+      text: '&Select All'
+      shortcut: Ctrl-A
+      status: Selects all hotspots
+      method: commandSelectAll
+-
+  ident: !ruby/sym mode
+  text: '&Mode'
+  items:
+    -
+      ident: !ruby/sym select
+      type: radio
+      group: !ruby/sym mode
+      text: '&Select Hotspot'
+      method: modeSet
+    -
+      ident: !ruby/sym edit
+      type: radio
+      group: !ruby/sym mode
+      text: '&Edit Hotspots'
+      method: modeSet
+    -
+      ident: !ruby/sym drawPolygon
+      type: radio
+      group: !ruby/sym mode
+      text: 'Draw Po&lygon'
+      method: modeSet
+      selected: true
+    -
+      ident: !ruby/sym drawPencil
+      type: radio
+      group: !ruby/sym mode
+      text: 'Draw &Pencil'
+      method: modeSet
+    -
+      ident: !ruby/sym drawRect
+      type: radio
+      group: !ruby/sym mode
+      text: 'Draw &Rectangle'
+      method: modeSet
+-
+  ident: !ruby/sym view
+  text: '&View'
+  items:
+    -
+      ident: !ruby/sym barsShown
+      type: cascade
+      text: '&Tool Bars'
+      items:
+        -
+          ident: !ruby/sym toolBarToggle
+          type: check
+          text: '&Tool Bar'
+          status: Toggle whether the tool bar is visible
+          method: toolBarToggle
+          checked: false
+        -
+          ident: !ruby/sym statusBarToggle
+          type: check
+          text: '&Status Bar'
+          status: Toggle whether the status bar is visible
+          method: statusBarToggle
+          checked: false
+        -
+          ident: !ruby/sym modeBarToggle
+          type: check
+          text: '&Mode Bar'
+          status: Toggle whether the status bar is visible
+          method: modeBarToggle
+          checked: false
+-
+  ident: !ruby/sym tools
+  text: '&Tools'
+  items:
+    -
+      ident: !ruby/sym preferences
+      type: command
+      text: '&Preferences'
+      disabled: true
+    -
+      type: separator
+    -
+      ident: !ruby/sym generateHotspots
+      type: command
+      text: '&Generate Hotspots...'
+      status: Generate a large number of hotspots
+      method: generateHotspots
+-
+  ident: !ruby/sym help
+  text: '&Help'
+  items:
+    -
+      ident: !ruby/sym helpTopics
+      type: command
+      text: '&Help Topics'
+      shortcut: F1
+      status: General help in using the application
+      disabled: true
+    -
+      type: separator
+    -
+      ident: !ruby/sym about
+      type: command
+      text: '&About This Program'
+      status: General help in using the application
+      method: commandAbout
